@@ -1,0 +1,56 @@
+\documentclass[12pt]{memoir}
+
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+\setlength{\topmargin}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\voffset}{0pt}
+\setlength{\hoffset}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+
+
+\begin{document}
+\pagestyle{empty}
+    % Page iteration
+    %% for n in range(0,N_CARDS - 1)
+      \begin{vplace}[0.7]\begin{center}
+      \textsf{\LARGE BIOLOGY BINGO}\\[24pt]
+      \begin{tabular}{@{}|@{}c@{}|@{}c@{}|@{}c@{}|@{}c@{}|@{}c@{}|@{}}\hline
+        %% for i in range(0, 5)
+          %% for j in range(0, 4)
+            \parbox[c][1in][c]{1.2in}{\centering{}\textsf{%
+                \large{}\VAR{words[n][i][j]}%
+            }} & %
+          %% endfor
+          \parbox[c][1in][c]{1.2in}{\centering{}\textsf{%
+          \large{}\VAR{words[n][i][4]}%
+          }} \\ \hline
+        %% endfor
+      \end{tabular}
+      \end{center}\end{vplace}
+      \newpage
+    %% endfor
+
+    % Last page
+
+    \textsf{\LARGE BIOLOGY BINGO}\\[24pt]
+    \begin{tabular}{@{}|@{}c@{}|@{}c@{}|@{}c@{}|@{}c@{}|@{}c@{}|@{}}\hline
+      %% for i in range(0, 5)
+        %% for j in range(0, 4)
+          \parbox[c][1in][c]{1.2in}{\centering{}\textsf{%
+              \large{}\VAR{words[N_CARDS - 1][i][j]}%
+          }} & %
+        %% endfor
+        \parbox[c][1in][c]{1.2in}{\centering{}\textsf{%
+        \large{}\VAR{words[N_CARDS - 1][i][4]}%
+        }} \\ \hline
+      %% endfor
+    \end{tabular}
+    \\
+
+
+\end{document}
